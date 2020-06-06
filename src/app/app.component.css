@@ -13,13 +13,41 @@ mat-nav-list {
   overflow: auto;
 }
 
-mat-nav-list .active, mat-nav-list .mat-list-item-focus.active:focus {
+mat-nav-list .active,
+mat-nav-list .mat-list-item-focus.active:focus {
   background: #afddff;
 }
 
 router-outlet + * {
   width: 100%;
   overflow: auto;
+}
+
+/* Flex Column Layout  */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  flex: 1;
+  /* height: auto; */
+  min-height: 100vh;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+  /* height: auto;
+  min-height: 100vh; */
 }
 
 gridster-item div.button-holder {
@@ -54,7 +82,10 @@ gridster-item div.button-holder {
   cursor: pointer;
 }
 
-app-parent-dynamic, app-widget-a, app-widget-b, app-widget-c {
+app-parent-dynamic,
+app-widget-a,
+app-widget-b,
+app-widget-c {
   display: flex;
   height: 100%;
   width: 100%;
